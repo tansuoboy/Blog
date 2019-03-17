@@ -1,0 +1,21 @@
+.tab_div {
+	color: darkslategrey;
+	height: auto;
+	width: 1000px;
+	margin: auto auto;
+	background-color: #5FB878;
+	border-radius: 10px;
+}
+td {
+	font-size: 18px;
+	border: solid;
+	border-color: #009688;
+	text-align: center;
+	width: 400px;
+	height: 30px;
+	padding: 3px 0px;
+}
+p {
+	text-align: center;
+	font-size: 18px;
+}

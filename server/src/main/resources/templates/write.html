@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title>编辑博客</title>
+	</head>
+	<link rel="stylesheet" th:href="@{/layui/css/write.css}"/>
+	<body>
+	<div>
+		<form action="" method="post" th:action="@{/blog}">
+			标题：<input type="text" name="title"/><p/>
+			标签：<input type="text" name="summary"/><p/>
+			简介：<input type="text" name="smallContent"/><p/>
+			<textarea id="content" style="height:400px;width:600px;" name="content"></textarea>
+    		<input type="submit" id="submit" value="提交" />
+		</form>
+</div>
+	</body>
+	<script type="text/javascript" src="showdown-master/dist/showdown.min.js" th:src="@{/layui/showdown.min.js}"></script>
+	<script>
+		var converter = new showdown.Converter();
+		document.getElementById('submit').onclick = function () {
+			document.getElementById('content').value =converter.makeHtml(document.getElementById('content').value);
+		}
+	</script>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8"/>
+	<title>后台登录</title>
+</head>
+
+<link rel="stylesheet" th:href="@{/layui/css/login.css}"/>
+<link rel="stylesheet" th:href="@{/layui/css/layui.css}"/>
+
+	<body>
+		<div class="form_div">
+			<form action="" method="post"  th:action="@{/login/up}">
+				<div style="color:red;" th:text="${info}" th:if="${not #strings.isEmpty(info)}" ></div>
+				<div class="content">
+					<p class="p">博客后台登录界面</p>
+					<div class="content__input">
+						<span>用户名:</span>
+						<input type="text" name="username" id="username"  class="input"/>
+					</div>
+					<div class="content__input">
+						<span>密码:</span>
+						<input type="password" name="password" class="input"/>
+					</div>
+					<input class="layui-btn" type="submit" value="登录" id="submit"/>
+				</div>
+			</form>
+		</div>
+	</body>
+<script type="text/javascript" th:src="@{/libs/jquery.min.js}" ></script>
+<script type="text/javascript" th:src="@{/layui/layui.all.js}"></script>
+	
+</html>
